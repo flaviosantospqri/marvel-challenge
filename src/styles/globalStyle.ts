@@ -4,28 +4,28 @@ export const GlobalStyle = createGlobalStyle`
 @import url('https://fonts.googleapis.com/css2?family=Marvel:ital,wght@0,700;1,400;1,700&display=swap');
 @font-face {
     font-family: "Axiform";
-    src: url("../../public/fonts/Kastelov - Axiforma thin.otf")
+    src: url("/fonts/Kastelov - Axiforma thin.otf")
     format("opentype");
     font-weight: 100; 
     font-style: normal;
 }
 @font-face {
     font-family: "Axiform";
-    src: url("../../public/fonts/Kastelov - Axiforma Regular.otf")
+    src: url("/fonts/Kastelov - Axiforma Regular.otf")
     format("opentype");
     font-weight: 400; 
     font-style: normal;
 }
 @font-face {
     font-family: "Axiform";
-    src: url("../../public/fonts/Kastelov - Axiforma Bold.otf")
+    src: url("/fonts/Kastelov - Axiforma Bold.otf")
     format("opentype");
     font-weight: 700; 
     font-style: normal;
 }
 @font-face {
     font-family: "Axiform";
-    src: url("../../public/fonts/Kastelov - Axiforma ExtraBold.otf")
+    src: url("/fonts/Kastelov - Axiforma ExtraBold.otf")
     format("opentype");
     font-weight: 900; 
     font-style: normal;
