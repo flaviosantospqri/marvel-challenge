@@ -1,5 +1,5 @@
 import RouterApp from "../routes"
-import { Div, Main, Section, H1, Container } from "./styles/appStyle"
+import { Div, Main, Section, H1, Container } from "./pages/Home/homeStyle"
 
 
 
@@ -7,14 +7,7 @@ function App() {
 
   return (
     <>
-      <Container />
       <RouterApp />
-      <Main>
-        <Section />
-        <Div>
-          <H1>MARVEL</H1>
-        </Div>
-      </Main>
     </>
   )
 }
