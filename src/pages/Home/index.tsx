@@ -1,14 +1,14 @@
 import { FC } from 'react';
-import { Container, Div, H1, Main, Section } from './homeStyle';
+import { Container, Main, Section } from './style';
+import { Logo } from '../../components';
+
 const Home: FC = () => {
     return (
         <>
             <Container />
             <Main>
                 <Section />
-                <Div>
-                    <H1>MARVEL</H1>
-                </Div>
+                <Logo size="md" />
             </Main>
         </>
     )

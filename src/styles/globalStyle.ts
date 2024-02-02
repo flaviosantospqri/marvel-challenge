@@ -3,7 +3,7 @@ import { createGlobalStyle } from "styled-components";
 export const GlobalStyle = createGlobalStyle`
 @import url('https://fonts.googleapis.com/css2?family=Marvel:ital,wght@0,700;1,400;1,700&display=swap');
 @font-face {
-    font-family: "Axiform";
+    font-family: "Axiform Thin";
     src: url("/fonts/Kastelov - Axiforma thin.otf")
     format("opentype");
     font-weight: 100; 
@@ -33,10 +33,15 @@ export const GlobalStyle = createGlobalStyle`
 :root{
     --primary-font: 'Marvel', sans-serif;
     --secondary-font: "Axiform", sans-serif; 
+    --secondary-font-thin: "Axiform Thin", sans-serif; 
     --default-background: linear-gradient(to right, #000000 65%, #212121, #808080);
     --red-color: rgb(255, 0, 0);
-    --white-color: #ffffff
-    --card-details-background: linear-gradient(to right, #FF0000, #400E0E)
+    --gray-color: #808080;
+
+    --white-color: #ffffff;
+    --card-details-background: linear-gradient(to right, #FF0000, #400E0E);
+    color: #ffffff;
+    font-size: 16px;
 
 }
 body{
@@ -49,9 +54,6 @@ body{
     width: 100%;
     margin: 0;
     padding: 0;
-}
-h1{
-    font-family: var(--secondary-font);
-    background-color: var(--red-color);
+    font-size: 16px;
 }
 `;
