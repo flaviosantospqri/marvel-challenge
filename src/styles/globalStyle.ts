@@ -34,7 +34,7 @@ export const GlobalStyle = createGlobalStyle`
     --primary-font: 'Marvel', sans-serif;
     --secondary-font: "Axiform", sans-serif; 
     --secondary-font-thin: "Axiform Thin", sans-serif; 
-    --default-background: linear-gradient(to right, #000000 65%, #212121, #808080);
+    --default-background: linear-gradient(to right, #000000 30%, #212121, #808080);
     --red-color: rgb(255, 0, 0);
     --gray-color: #808080;
 

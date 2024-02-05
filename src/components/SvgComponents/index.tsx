@@ -1,4 +1,4 @@
-import React, { FC } from 'react';
+import { FC } from 'react';
 
 interface SvgComponentProps {
     url: string;
@@ -7,7 +7,9 @@ interface SvgComponentProps {
 
 const SvgComponent: FC<SvgComponentProps> = ({ url, alt }) => {
     return (
-        <img src={url} alt={alt} />
+        <>
+            <img src={url} alt={alt} />
+        </>
     );
 };
 

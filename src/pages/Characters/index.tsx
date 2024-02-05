@@ -1,8 +1,7 @@
 import axios from 'axios';
 import { FC, useEffect, useState } from 'react';
-import { SvgComponent } from '../../components';
+import { Gallery, SvgComponent } from '../../components';
 import { Container } from './style';
-
 interface Characters {
     id: number;
     description: string;
@@ -31,13 +30,7 @@ const Characters: FC = () => {
     }, [])
     return (
         <Container>
-            <ul>
-                {characters.map((character) => (
-                    <li key={character.id}>
-                        <SvgComponent url={character.img} alt="" />
-                    </li>
-                ))}
-            </ul>
+            <Gallery listItens={characters} />
         </Container>
     )
 }
