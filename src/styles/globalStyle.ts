@@ -50,10 +50,13 @@ body{
     color: var(--white-color);
     background-size: 110%;
     height: 100vh;
-    overflow: hidden;
     width: 100%;
-    margin: 0;
     padding: 0;
     font-size: 16px;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+body > * {
+    margin: 0 auto;
 }
 `;

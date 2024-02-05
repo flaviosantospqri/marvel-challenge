@@ -1,0 +1,199 @@
+{
+  "characters": [
+    {
+      "id": 1,
+      "description": "Na história original dos quadrinhos, o Hulk é um selvagem e poderoso alter ego do Dr. Robert Bruce Banner, um cientista que foi atingido por raios gama enquanto salvava um adolescente durante o teste militar.",
+      "name": "Hulk",
+      "img": "https://i.imgur.com/KCVHE8I.png",
+      "appearances": [
+        "Vingadores",
+        "Vingadores - Era de Ultron",
+        "Thor - Ragnarok",
+        "Vingadores - Guerra Infinita",
+        "Vingadores - Ultimato "
+      ],
+      "rating": 0
+    },
+    {
+      "id": 2,
+      "description": "Wanda Maximoff foi sequestrada da Sérvia e trazida para a Montanha Wundagore, base do Alto Evolucionário. Durante anos, ela e seu irmão gêmeo, Pietro, acreditavam que eram filhos de um casal de ciganos.",
+      "name": "Wanda Maximoff",
+      "img": "https://i.imgur.com/KCVHE8I.png",
+      "appearances": [
+        "Vingadores - Era de Ultron",
+        "Capitão América - Guerra Civil",
+        "Vingadores - Guerra Infinita",
+        "Vingadores - Ultimato",
+        "WandaVision"
+      ],
+      "rating": 0
+    },
+    {
+      "id": 3,
+      "description": "A lua Titã era governada por Mentor (A'Lars), quando então reinava paz e tecnologia. Mentor tinha dois filhos: Eros e Thanos.  Ao contrário do irmão, Thanos, era bem mais poderoso e almejava ainda mais.",
+      "name": "Thanos",
+      "img": "https://i.imgur.com/KCVHE8I.png",
+      "appearances": [
+        "Vingadores",
+        "Guardiões da Galáxia - vol. I",
+        "Vingadores - Guerra Infinita",
+        "Vingadores - Ultimato"
+      ],
+      "rating": 0
+    },
+    {
+      "id": 4,
+      "description": "Após ser mordido por uma aranha radioativa, Peter Parker se torna o amigo da vizinhança, o Homem-Aranha.",
+      "name": "Homem-Aranha",
+      "img": "https://i.imgur.com/KCVHE8I.png",
+      "appearances": [
+        "Vingadores",
+        "Vingadores - Era de Ultron",
+        "Thor - Ragnarok",
+        "Vingadores - Guerra Infinita",
+        "Vingadores - Ultimato "
+      ],
+      "rating": 0
+    },
+    {
+      "id": 5,
+      "description": "'Rei do Espaço.'' 'Mestre do Sol.'' Vocês afirmam ter domínios tão vastos. É para equilibrar suas almas insignificantes? Não poderia eu reivindicar a luz e o vazio, se assim o desejasse? Eu não conquistei tais títulos? Eu, que dominei todas as artes, todas as ciências, todos os segredos?",
+      "name": "Doutor Destino",
+      "img": "",
+      "appearances": ["Quarteto Fantástico", "Infame Homem de Ferro"],
+      "rating": 0
+    }
+  ],
+  "movies": [
+    {
+      "id": 1,
+      "description": "Tony Stark (Robert Downey Jr.) é um industrial bilionário, que também é um brilhante inventor, ao ser sequestrado, ele é obrigado a construir uma arma devastadora, mas ao invés disso, cria uma armadura capaz de mudar a história.",
+      "name": "Homem de Ferro",
+      "img": "./imgs/movies/ironman.svg",
+      "release": "04/30/2008",
+      "rating": 0,
+      "display_platforms": [
+        {
+          "name": "Disney",
+          "img": ""
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "description": "O mundo já sabe que o inventor bilionário Tony Stark (Robert Downey Jr.) é o super-herói blindado Homem de Ferro. Sofrendo pressão do governo, da mídia e do público para compartilhar sua tecnologia com as forças armadas",
+      "name": "Homem de Ferro 2",
+      "img": "./imgs/movies/HOMEM-DE-FERRO-2.svg",
+      "release": "04/30/2010",
+      "rating": 0,
+      "display_platforms": [
+        {
+          "name": "Disney",
+          "img": ""
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "description": "Quando é banido do reino de Asgard e exilado na Terra, o arrogante guerreiro Thor (Chris Hemsworth) é obrigado a lutar para reaver seus poderes perdidos. ",
+      "name": "Thor",
+      "release": "07/07/2022",
+      "img": "./imgs/movies/Thor_Official_Poster.svg",
+      "rating": 0,
+      "display_platforms": [
+        {
+          "name": "Disney",
+          "img": ""
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "description": "Em Capitão América: O Primeiro Vingador, conhecemos a história de Steve Rogers (Chris Evans) e como ele se tornou o melhor soldado do mundo.",
+      "name": "Capitão América: Primeiro Vingador",
+      "release": "06/29/2011",
+      "img": "./imgs/movies/capitaoamerica.svg",
+      "rating": 0,
+      "display_platforms": [
+        {
+          "name": "Disney",
+          "img": ""
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "description": "Capitã Marvel, parte do exército de elite dos Kree, uma raça alienígena, encontra-se no meio de uma batalha entre seu povo e os Skrulls.",
+      "name": "Capitã Marvel",
+      "release": "02/27/2019",
+      "img": "./imgs/movies/capitamarvel.svg",
+      "rating": 0,
+      "display_platforms": [
+        {
+          "name": "Disney",
+          "img": ""
+        }
+      ]
+    }
+  ],
+  "comics": [
+    {
+      "id": 1,
+      "description": "Garth Ennis e sua violência atacam novamente na HQ que leva a violência das histórias de Thor ao limite! Na minissérie de 2003 vemos vikings de um passado distante voltando a vida.",
+      "name": "Thor: Vikings",
+      "img": "./imgs/comics/thor.svg",
+      "rating": 0,
+      "for_salle": [
+        {
+          "name": "Americanas",
+          "img": ""
+        },
+        {
+          "name": "Amazon",
+          "img": ""
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "description": "Origem é uma minissérie em quadrinhos publicada pela Marvel Comics em seis edições, entre 2001 e 2002. A história conta a revelação do passado do personagem Wolverine.",
+      "name": "Wolverine: Origens",
+      "img": "./imgs/comics/origem.svg",
+      "rating": 0,
+      "for_salle": [
+        {
+          "name": "Americanas",
+          "img": ""
+        },
+        {
+          "name": "Amazon",
+          "img": ""
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "description": "O único oponente do Devorador de Mundos é o herói que ele aprisionou na Terra: o Surfista Prateado, Galactus jurou não consumir o planeta, mas e se, em vez disso, ele transformar a civilização em seus adoradores?",
+      "name": "Surfista Prateado:Parábola",
+      "img": "./imgs/comics/surfista.svg",
+      "rating": 0,
+      "for_salle": [
+        {
+          "name": "Americanas",
+          "img": ""
+        },
+        {
+          "name": "Amazon",
+          "img": ""
+        }
+      ]
+    }
+  ],
+  "users": [
+    {
+      "userName": "admin",
+      "password": "admin",
+      "email": "admin@admin.com"
+    }
+  ]
+}
