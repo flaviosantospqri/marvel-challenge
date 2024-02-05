@@ -14,6 +14,7 @@ export const Container = styled.div<StyleProps>`
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
   div {
     position: absolute;
     display: flex;
@@ -29,7 +30,7 @@ export const Container = styled.div<StyleProps>`
     width: 100%;
     left: -10px;
     background: var(--card-details-background);
-    opacity: 0.5;
+    opacity: 0.8;
     border-radius: 30px;
     .details {
       font-size: 18px;
