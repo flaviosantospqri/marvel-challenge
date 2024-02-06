@@ -6,6 +6,7 @@ interface Props {
 
 export const Container = styled.div<Props>`
   display: flex;
+  cursor: pointer;
   align-items: center;
   justify-content: center;
   text-align: center;

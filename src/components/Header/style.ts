@@ -27,6 +27,14 @@ export const Container = styled.header`
     color: var(--gray-color);
     list-style-type: none;
     font-size: 32px;
+    .content-avatar-none {
+      font-size: 18px;
+      color: var(--red-color);
+      font-weight: bold;
+    }
+    .content-avatar-none:hover {
+      color: #820300;
+    }
     .content-avatar {
       text-align: center;
       display: flex;
