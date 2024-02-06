@@ -1,6 +1,6 @@
 import axios from 'axios';
 import { FC, useEffect, useState } from 'react';
-import { Gallery, SvgComponent } from '../../components';
+import { Gallery } from '../../components';
 import { Container } from './style';
 interface Characters {
     id: number;

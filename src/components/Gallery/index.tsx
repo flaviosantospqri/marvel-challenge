@@ -17,6 +17,7 @@ interface GalleryProps {
 }
 
 const Gallery: FC<GalleryProps> = ({ listItens }) => {
+    console.log(listItens)
     return (
         <ContanteSwipper>
             <Swiper
@@ -28,20 +29,19 @@ const Gallery: FC<GalleryProps> = ({ listItens }) => {
                     prevEl: '.swiper-button-prev',
                     nextEl: '.swiper-button-next',
                 }}
-
             >
-                {listItens.map((item, index) => (
-                    <SwiperSlide key={index}>
-                        <Container>
+                <Container>
+                    {listItens.map((item, index) => (
+                        <SwiperSlide key={index}>
                             <Card item={item} />
-                        </Container>
-                    </SwiperSlide>
-                ))}
+                        </SwiperSlide>
+                    ))}
+                </Container>
                 <div className="swiper-button-prev">
-                    <FaArrowLeft style={{ fontSize: '24px' }} />
+                    <FaArrowLeft />
                 </div>
                 <div className="swiper-button-next">
-                    <FaArrowRight style={{ fontSize: '24px' }} />
+                    <FaArrowRight />
                 </div>
             </Swiper>
         </ContanteSwipper >

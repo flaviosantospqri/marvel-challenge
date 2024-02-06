@@ -39,7 +39,7 @@ export const GlobalStyle = createGlobalStyle`
     --gray-color: #808080;
 
     --white-color: #ffffff;
-    --card-details-background: linear-gradient(to right, #FF0000, #400E0E);
+    --card-details-background: linear-gradient(to right, rgba(255, 0, 0, 0.7), rgba(64, 14, 14, 0.7));
     color: #ffffff;
     font-size: 16px;
 
