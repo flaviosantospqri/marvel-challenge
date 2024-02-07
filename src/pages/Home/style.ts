@@ -3,10 +3,10 @@ import styled from "styled-components";
 export const Section = styled.section`
   background: url("/src/assets/imgs/main.png");
   background-size: cover;
+  background-repeat: no-repeat;
   height: 100%;
   width: 50%;
   position: fixed;
-  background-size: cover;
   right: 0;
   z-index: -1;
 `;

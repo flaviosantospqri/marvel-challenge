@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 export const Container = styled.header`
   display: flex;
+  z-index: 100;
   align-items: center;
   justify-content: space-between;
   background-color: #000000;
@@ -43,6 +44,10 @@ export const Container = styled.header`
       align-items: center;
       justify-content: space-between;
       position: relative;
+      border: none;
+      color: var(--gray-color);
+      background-color: transparent;
+      cursor: pointer;
 
       .avatar {
         width: 50px;

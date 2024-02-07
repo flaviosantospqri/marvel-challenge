@@ -4,15 +4,15 @@ import App from './App.tsx'
 import { GlobalStyle } from './styles/globalStyle.ts'
 import { BrowserRouter } from 'react-router-dom'
 import { Provider } from 'react-redux';
-import { store } from './store/store.ts';
+import { store } from './store/index.ts';
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
-    <GlobalStyle />
-    <BrowserRouter >
-      <Provider store={store}>
+    <Provider store={store}>
+      <GlobalStyle />
+      <BrowserRouter >
         <App />
-      </Provider>
-    </BrowserRouter>
+      </BrowserRouter>
+    </Provider>
   </React.StrictMode>,
 )

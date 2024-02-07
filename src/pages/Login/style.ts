@@ -5,8 +5,6 @@ export const Container = styled.div`
   display: flex;
   align-items: center;
   flex-direction: column;
-  height: 100vh;
-  z-index: 1000;
   justify-content: center;
   & .header-login-information {
     font-family: var(--secondary-font);

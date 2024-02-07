@@ -1,10 +1,10 @@
 import { FC, useEffect } from 'react';
 import { Logo } from '..';
 import { Container } from './style';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
-import { RootState } from '../../store/store';
-import { logOut } from '../../store/authSlice';
+import { logout } from '../../store/authSlice';
+import { RootState } from '../../store/types';
 
 interface MenuObject {
     id: number,
@@ -18,13 +18,12 @@ interface MenuItensComponents {
 const Header: FC<MenuItensComponents> = ({ itens }) => {
     const auth = useSelector((state: RootState) => state.auth);
     const dispatch = useDispatch();
+    const navigate = useNavigate();
 
     const signOut = () => {
-        dispatch(logOut())
+        dispatch(logout());
+        navigate('/login');
     }
-    useEffect(() => {
-        console.log(auth.status)
-    }, [auth])
 
     return (
         <Container>
@@ -32,13 +31,24 @@ const Header: FC<MenuItensComponents> = ({ itens }) => {
                 <Logo size='md' />
             </div>
             <ul>
-                {itens.map((item) => (
-                    <Link to={item.name === "Sair" && auth.status ? item.route : "/login"} >
-                        {item.name !== "Sair" ? <li key={item.id}>
-                            {item.name}
-                        </li> : <li key={item.id} onClick={signOut} className={auth.status ? 'content-avatar' : "content-avatar-none"}><span className='avatar'></span>{auth.status ? "Sair" : item.name}</li>}
-
-                    </Link>
+                {itens.map((item, index) => (
+                    // Verifica se o item é "Sair" e se o usuário está autenticado
+                    // Se sim, chama a função de logout ao clicar
+                    // Se não, redireciona para a rota definida no item
+                    <li key={index}>
+                        {item.name !== "Sair" ? (
+                            <Link to={item.route}>{item.name}</Link>
+                        ) : (
+                            auth.isAuthenticated ? (
+                                <button onClick={signOut} className='content-avatar'>
+                                    <span className='avatar'></span>
+                                    Sair
+                                </button>
+                            ) : (
+                                <Link className='content-avatar-none' to="/login">Login</Link>
+                            )
+                        )}
+                    </li>
                 ))}
             </ul>
         </Container>

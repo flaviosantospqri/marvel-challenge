@@ -1,25 +1,40 @@
-import { FC, FormEvent, useState } from 'react';
-import { Section } from '../Home/style';
-import { Link } from 'react-router-dom';
+import { FC, FormEvent, useEffect, useState } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
 import { Logo } from '../../components';
 import { Container } from './style';
 import { Container as ContainerHome } from "../Home/style";
+import { useDispatch, useSelector } from 'react-redux';
+import { loginRequest } from '../../store/authActions';
+import { RootState } from '../../store/types';
+
+interface UserState {
+    username: string,
+    password: string
+    saveLogin?: boolean;
+}
 
 const Login: FC = () => {
+    const auth = useSelector((state: RootState) => state.auth);
     const [recentAuth, setRecentAuth] = useState(true)
-
+    const dispatch = useDispatch()
+    const navigate = useNavigate()
 
     const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
         e.preventDefault();
 
-        const userData = {
-            user: e.currentTarget.user.value,
+        const userData: UserState = {
+            username: e.currentTarget.user.value,
             password: e.currentTarget.password.value,
             saveLogin: e.currentTarget['save-login'].checked,
         };
-
-        console.log(userData);
+        dispatch(loginRequest(userData))
     };
+    useEffect(() => {
+        if (auth.isAuthenticated) {
+            navigate("/characters")
+        }
+    }, [auth])
+
     return (
         <>
             <ContainerHome />
@@ -51,8 +66,8 @@ const Login: FC = () => {
                         <p>Ainda não tem login? <Link to="/register">Cadastre-se</Link></p>
                     </div>
                 </div>
-                <Section />
             </Container>
+            {/* <Section /> */}
 
         </>
     )
