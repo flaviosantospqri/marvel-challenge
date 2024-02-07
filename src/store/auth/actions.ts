@@ -1,4 +1,4 @@
 import { createAction } from "@reduxjs/toolkit";
-import { User } from "./authSlice";
+import { User } from "./slice";
 
 export const loginRequest = createAction<User>("auth/loginRequest");

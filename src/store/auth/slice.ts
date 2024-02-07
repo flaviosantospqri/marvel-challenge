@@ -21,7 +21,7 @@ const authSlice = createSlice({
       state.user = action.payload;
       state.error = null;
     },
-    setInStorage(state, action: PayloadAction<User>) {
+    setInStorage(_, action: PayloadAction<User>) {
       localStorage.setItem("username", action.payload.username);
     },
     loginFailure(state, action: PayloadAction<string>) {

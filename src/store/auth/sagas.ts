@@ -1,5 +1,5 @@
 import { takeLatest, put, call } from "redux-saga/effects";
-import { loginSuccess, loginFailure, setInStorage } from "./authSlice";
+import { loginFailure, loginSuccess, setInStorage } from "./slice";
 
 function* loginUser(action: any): Generator<any, void, any> {
   const { username, password } = action.payload;
