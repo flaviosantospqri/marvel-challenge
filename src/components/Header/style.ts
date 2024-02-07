@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const Container = styled.header`
   display: flex;
-  z-index: 100;
+  top: 0;
   align-items: center;
   justify-content: space-between;
   background-color: #000000;
@@ -10,6 +10,7 @@ export const Container = styled.header`
   height: 100px;
   border-bottom: 2px solid rgba(255, 0, 0, 0.5);
   position: fixed;
+  z-index: 999;
   .logo {
     margin-left: 30px;
   }

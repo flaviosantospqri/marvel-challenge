@@ -9,6 +9,7 @@ function App() {
 
   return (
     <>
+   
       <Header itens={[
         { id: 1, name: "Personagens", route: "./characters" },
         { id: 2, name: "Filmes", route: "./movies" },

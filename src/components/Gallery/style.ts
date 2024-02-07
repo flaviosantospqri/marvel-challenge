@@ -4,16 +4,16 @@ export const Container = styled.ul`
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 500px;
-  div {
-    margin: 30px;
-  }
+  flex-wrap: wrap;
+ 
 `;
 
 export const ContanteSwipper = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 1100px;
-  height: 700px;
+  max-width: 1100px;
+  width:100%;
+  flex-wrap: wrap;
+  margin-top: 100px;
 `;
