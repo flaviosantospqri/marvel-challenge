@@ -17,7 +17,6 @@ interface GalleryProps {
 }
 
 const Gallery: FC<GalleryProps> = ({ listItens }) => {
-    console.log(listItens)
     return (
         <ContanteSwipper>
             <Swiper

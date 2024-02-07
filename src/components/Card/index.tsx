@@ -20,7 +20,6 @@ const Card: FC<CardProps> = ({ item }) => {
 
     const openDetails = () => {
         setOpenDetalis(prevState => !prevState)
-        console.log(details)
     }
     return (
         <Container type={details ? "opened" : "close"}>
