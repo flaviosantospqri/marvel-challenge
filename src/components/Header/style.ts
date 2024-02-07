@@ -64,7 +64,7 @@ export const Container = styled.header`
 
     a {
       text-decoration: none;
-      color: inherit; /* Use a cor do pai (var(--gray-color)) para os links */
+      color: inherit;
     }
     li:hover,
     li:active {

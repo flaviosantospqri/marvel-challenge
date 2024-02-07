@@ -1,4 +1,4 @@
-import { FC, useEffect } from 'react';
+import { FC } from 'react';
 import { Logo } from '..';
 import { Container } from './style';
 import { Link, useNavigate } from 'react-router-dom';
@@ -33,9 +33,6 @@ const Header: FC<MenuItensComponents> = ({ itens }) => {
             </div>
             <ul>
                 {itens.map((item, index) => (
-                    // Verifica se o item é "Sair" e se o usuário está autenticado
-                    // Se sim, chama a função de logout ao clicar
-                    // Se não, redireciona para a rota definida no item
                     <li key={index}>
                         {item.name !== "Sair" ? (
                             <Link to={item.route}>{item.name}</Link>

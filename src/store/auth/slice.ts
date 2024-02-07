@@ -1,15 +1,17 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
-
+const user = localStorage.getItem("isAuth");
 interface AuthState {
   user: User | null;
   isAuthenticated: boolean;
   error: string | null;
+  saveLogin?: boolean | null | undefined;
 }
 
 const initialState: AuthState = {
   user: null,
-  isAuthenticated: false,
+  isAuthenticated: user ? true : false,
   error: null,
+  saveLogin: false,
 };
 
 const authSlice = createSlice({
@@ -22,7 +24,10 @@ const authSlice = createSlice({
       state.error = null;
     },
     setInStorage(_, action: PayloadAction<User>) {
-      localStorage.setItem("username", action.payload.username);
+      if (action.payload.saveLogin) {
+        localStorage.setItem("user", JSON.stringify(action.payload));
+      }
+      localStorage.setItem("isAuth", "true");
     },
     loginFailure(state, action: PayloadAction<string>) {
       state.isAuthenticated = false;
@@ -33,6 +38,7 @@ const authSlice = createSlice({
       state.isAuthenticated = false;
       state.user = null;
       state.error = null;
+      localStorage.removeItem("isAuth");
     },
   },
 });
@@ -44,4 +50,5 @@ export default authSlice.reducer;
 export interface User {
   username: string;
   password: string;
+  saveLogin?: boolean | null | undefined;
 }

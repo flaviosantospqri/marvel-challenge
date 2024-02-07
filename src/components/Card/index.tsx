@@ -30,13 +30,13 @@ const Card: FC<CardProps> = ({ item }) => {
 
             <div className='footer-card'>
 
-                <p>
+                <div>
                     <p className='footer-name'>{item.name}</p>
                     {details ?
                         (<div className='appearances'>
                             <h1 className='title-appearances'>Aparacições</h1>
                             <ul className='list-appearances'>
-                                {item.appearances?.map(apareces => <li>{apareces}</li>)}
+                                {item.appearances?.map((apareces, index) => <li key={index}>{apareces}</li>)}
                             </ul>
                         </div>
                         ) : <p className='footer-description'>{item.description}</p>
@@ -54,7 +54,7 @@ const Card: FC<CardProps> = ({ item }) => {
                     <p className='footer-details' onClick={openDetails}>
                         {details ? <IoCloseCircleOutline /> : "Ver detalhes"}
                     </p>
-                </p>
+                </div>
             </div>
         </Container>
     )

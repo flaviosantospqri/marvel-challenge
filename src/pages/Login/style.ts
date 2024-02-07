@@ -80,6 +80,7 @@ export const Container = styled.div`
           height: 60px;
           background-color: var(--red-color);
           border: none;
+          margin-top: 20px;
           border-radius: 20px;
           font-size: 1.5rem;
           color: var(--white-color);
