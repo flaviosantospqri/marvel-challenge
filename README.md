@@ -1,7 +1,7 @@
 
 # Marvel Challenge
 
-![Marvel](https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/MarvelLogo.svg/1200px-MarvelLogo.svg.png)
+![Marvel](https://logosmarcas.net/wp-content/uploads/2020/11/Marvel-Logo-2012-2014.png)
 
 Este é um projeto desenvolvido para os amantes do universo Marvel, que desejam explorar curiosidades sobre os filmes, personagens e HQs dessa incrível franquia. Desenvolvido em JavaScript com ReactJS e TypeScript, o projeto utiliza uma série de tecnologias modernas para proporcionar uma experiência rica e interativa aos usuários.
 
