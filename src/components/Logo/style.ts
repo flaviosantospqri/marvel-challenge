@@ -17,7 +17,6 @@ export const Container = styled.div<Props>`
   z-index: 20;
   background-color: red;
   h1 {
-    font-size: 4em;
     text-transform: uppercase;
     margin-bottom: 30px;
   }
