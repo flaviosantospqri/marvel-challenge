@@ -3,8 +3,9 @@ import { Logo } from '..';
 import { Container } from './style';
 import { Link, useNavigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
-import { logout } from '../../redux/slices/auth/authSlice';
-import { RootState } from '../../redux/config/types';
+import { RootState } from '../../store/config/types';
+import { logout } from '../../store/auth/slice';
+
 
 interface MenuObject {
     id: number,

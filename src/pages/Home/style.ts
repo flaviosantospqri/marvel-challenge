@@ -1,4 +1,13 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
+
+const waveAnimation = keyframes`
+   0% {
+    background-position: 0% 0%;
+  }
+  100% {
+    background-position: 100% 100%;
+  }
+`;
 
 export const Section = styled.section`
   background: url("/src/assets/imgs/main.png");
@@ -31,4 +40,6 @@ export const Container = styled.div`
   width: 100%;
   height: 100vh;
   position: absolute;
+  animation: ${waveAnimation} 30s linear infinite;
+  overflow: hidden;
 `;

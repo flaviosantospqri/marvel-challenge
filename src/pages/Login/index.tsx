@@ -4,8 +4,8 @@ import { Logo } from '../../components';
 import { Container } from './style';
 import { Container as ContainerHome } from "../Home/style";
 import { useDispatch, useSelector } from 'react-redux';
-import { loginRequest } from '../../redux/auth/authActions';
-import { RootState } from '../../redux/config/types';
+import { RootState } from '../../store/config/types';
+import { loginRequest } from '../../store/auth/actions';
 
 interface UserState {
     username: string,
