@@ -1,19 +1,10 @@
 import styled, { keyframes } from "styled-components";
 
-const waveAnimation = keyframes`
-   0% {
-    background-position: 0% 0%;
-  }
-  100% {
-    background-position: 100% 100%;
-  }
-`;
-
 export const Section = styled.section`
   background: url("/src/assets/imgs/main.png");
   background-size: cover;
   background-repeat: no-repeat;
-  height: 100%;
+  height: 100vh;
   width: 50%;
   position: fixed;
   right: 0;
@@ -36,10 +27,7 @@ export const Main = styled.main`
 export const Container = styled.div`
   background: var(--default-background);
   opacity: 0.8;
-  z-index: 1;
   width: 100%;
-  height: 100vh;
+  height: 100%;
   position: absolute;
-  animation: ${waveAnimation} 30s linear infinite;
-  overflow: hidden;
 `;

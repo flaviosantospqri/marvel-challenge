@@ -54,8 +54,10 @@ const Login: FC = () => {
         <>
             <ContainerHome />
             <Container>
-                <Logo size="md" />
                 <div className='container-login'>
+                    <div className='content-logo'>
+                        <h1>Marvel</h1>
+                    </div>
                     <div className='header-login-information'>
                         <p className='welcome'> {auth.isAuthenticated ? "Bem-vindo(a) de volta!" : "Bem vindo(a)"}</p>
                         <p className='make-login'>

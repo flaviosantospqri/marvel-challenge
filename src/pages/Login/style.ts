@@ -3,9 +3,24 @@ import styled from "styled-components";
 export const Container = styled.div`
   width: 50%;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   flex-direction: column;
   justify-content: center;
+  .content-logo {
+    font-family: "Marvel";
+    text-transform: uppercase;
+    align-self: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 40px;
+    width: 100%;
+    text-align: center;
+    h1 {
+      background-color: var(--red-color);
+      width: 200px;
+    }
+  }
   & .header-login-information {
     font-family: var(--secondary-font);
     display: flex;
@@ -21,7 +36,6 @@ export const Container = styled.div`
       color: var(--gray-color);
     }
     & p:first-child {
-      z-index: 1000;
       font-weight: 700;
       font-size: 2rem;
       color: var(--red-color);
@@ -32,7 +46,7 @@ export const Container = styled.div`
   }
   .container-login {
     font-family: var(--secondary-font);
-    z-index: 1000;
+    z-index: 200;
     a,
     a:link,
     a:active {

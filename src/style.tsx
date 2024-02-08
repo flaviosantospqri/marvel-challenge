@@ -4,5 +4,8 @@ export const ContainerApp = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 100px;
+    flex-direction: column;
+    /* margin-top: 100px; */
+    height: 900px;
+    overflow: hidden;
 `

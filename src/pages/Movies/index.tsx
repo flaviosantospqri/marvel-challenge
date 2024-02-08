@@ -42,10 +42,9 @@ const Movies: FC = () => {
     return (
         <Container>
             <div className='selection'>
-                <label htmlFor="sort">Ordenar por:</label>
                 <select id="sort" value={sortBy} onChange={(e) => setSortBy(e.target.value)}>
-                    <option value="lançamento">Lançamento</option>
-                    <option value="cronologia">Cronologia</option>
+                    <option className='option' value="lançamento">Lançamento</option>
+                    <option className='option' value="cronologia">Cronologia</option>
                 </select>
             </div>
             <Gallery listItens={sortedCharacters} />

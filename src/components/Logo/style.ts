@@ -19,5 +19,7 @@ export const Container = styled.div<Props>`
   h1 {
     text-transform: uppercase;
     margin-bottom: 30px;
+    font-size: 64px;
+    width: 100%;
   }
 `;

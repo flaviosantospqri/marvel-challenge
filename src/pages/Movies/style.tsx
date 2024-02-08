@@ -6,20 +6,18 @@ interface StyledComponentProps {
 
 export const Container = styled.div<StyledComponentProps>`
 font-family: var(--secondary-font);
-display: fex: 
 flex-direction: column;
-align-itens: center;
-justify-content: center;
 box-sizing: border-box;
 position: relative;
 .selection {
     margin: 20px;
-    border: 1px solid var(--red-color);
     width: 250px;
     color: var(--red-color);  
     position:absolute;
     top: 50px;
+    z-index: 100;
     padding: 10px;
+    background-color: transparent;
     border-radius: 4px;
     select{
         background-color: transparent;
@@ -29,6 +27,12 @@ position: relative;
         margin-left: 10px;
         position: absolute;
         user-select: none;
+        border: 1px solid var(--red-color);
+        padding: 8px;
+        border-radius: 4px;
+    }
+    select option{  
+        background-color: none;
     }
 }
 `
