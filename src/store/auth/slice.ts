@@ -23,6 +23,14 @@ const authSlice = createSlice({
       state.user = action.payload;
       state.error = null;
     },
+    signUpUserSuccess(state, action: PayloadAction<User>) {
+      state.user = action.payload;
+      state.error = null;
+    },
+    signUpUserFailure(state, action: PayloadAction<string>) {
+      state.user = null;
+      state.error = action.payload;
+    },
     setInStorage(_, action: PayloadAction<User>) {
       if (action.payload.saveLogin) {
         localStorage.setItem("user", JSON.stringify(action.payload));
@@ -43,11 +51,18 @@ const authSlice = createSlice({
   },
 });
 
-export const { loginSuccess, loginFailure, logout, setInStorage } =
-  authSlice.actions;
+export const {
+  loginSuccess,
+  loginFailure,
+  logout,
+  setInStorage,
+  signUpUserSuccess,
+  signUpUserFailure,
+} = authSlice.actions;
 export default authSlice.reducer;
 
 export interface User {
+  email?: string;
   username: string;
   password: string;
   saveLogin?: boolean | null | undefined;

@@ -1,54 +1,48 @@
-import { FC, useEffect, useState } from 'react';
+import { FC, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import { Logo } from '../../components';
-import { Container } from './style';
 import { Container as ContainerHome } from "../Home/style";
 import { useDispatch, useSelector } from 'react-redux';
 import { RootState } from '../../store/config/types';
-import { loginRequest } from '../../store/auth/actions';
+import { signupRequest } from '../../store/auth/actions';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
-import { setInStorage } from '../../store/auth/slice';
+import { Container } from './style';
 
 interface UserState {
+    email: string,
     username: string,
-    password: string
+    password: string,
     saveLogin?: boolean | null | undefined;
 }
 
-const Login: FC = () => {
+const SignUp: FC = () => {
     const auth = useSelector((state: RootState) => state.auth);
-    const userStorage = localStorage.getItem("user");
-    const user = userStorage ? JSON.parse(userStorage) : null;
+
 
     const navigate = useNavigate();
     const dispatch = useDispatch();
 
     const initialValues: UserState = {
-        username: user?.username && user.username,
-        password: user?.password && user.password,
+        email: '',
+        username: '',
+        password: '',
         saveLogin: false,
     };
-    const [userData, setUserData] = useState<UserState>(initialValues)
 
     const validationSchema = Yup.object().shape({
         username: Yup.string().required('Usuário é obrigatório'),
         password: Yup.string().required('Senha é obrigatória'),
     });
 
-    const handleSubmit = ({ username, password, saveLogin }: UserState) => {
-        dispatch(loginRequest({ username, password, saveLogin }));
-        setUserData({ username, password, saveLogin })
-    };
-    useEffect(() => {
-        if (auth.isAuthenticated) {
-            if (userData.saveLogin) {
-                dispatch(setInStorage(userData))
-            }
-            navigate("/")
+    const handleSubmit = async ({ email, username, password, saveLogin }: UserState) => {
+        const response = await dispatch(signupRequest({ username, password, saveLogin }));
+
+        if (response.payload.username) {
+            navigate("/login")
         }
 
-    }, [auth])
+
+    };
 
     return (
         <>
@@ -59,9 +53,9 @@ const Login: FC = () => {
                         <h1>Marvel</h1>
                     </div>
                     <div className='header-login-information'>
-                        <p className='welcome'> {auth.isAuthenticated ? "Bem-vindo(a) de volta!" : "Bem vindo(a)"}</p>
+                        <p className='welcome'> Acompanhe a maior</p>
                         <p className='make-login'>
-                            Acesse sua conta:
+                            Crie sua conta:
                         </p>
                     </div>
                     <div className='container-form'>
@@ -73,25 +67,18 @@ const Login: FC = () => {
                             {() => (
                                 <Form className='form'>
                                     <div className='form-input'>
+                                        <Field type="email" name="email" id="username" placeholder='Email' />
+                                        <ErrorMessage name="email" component="div" className="error-message" />
                                         <Field type="text" name="username" id="username" placeholder='Usuário' />
                                         <ErrorMessage name="username" component="div" className="error-message" />
                                         <Field type="password" name="password" id="password" placeholder='Senha' />
                                         <ErrorMessage name="password" component="div" className="error-message" />
                                     </div>
-                                    <div className='form-save-and-forgot'>
-                                        <div className='check-forgot'>
-                                            <label>
-                                                <Field type="checkbox" name="saveLogin" />
-                                                Salvar Login
-                                            </label>
-                                        </div>
-                                        <Link to="/forgot-password">Esqueci a senha</Link>
-                                    </div>
-                                    <button type='submit'>Entrar</button>
+                                    <button type='submit'>Cadastrar</button>
                                 </Form>
                             )}
                         </Formik>
-                        <p>Ainda não tem login? <Link to="/sign-up">Cadastre-se</Link></p>
+                        <p>Já tem uma conta? <Link to="/login">Faça Login</Link></p>
                     </div>
                 </div>
             </Container>
@@ -99,4 +86,4 @@ const Login: FC = () => {
     )
 }
 
-export default Login;
+export default SignUp;

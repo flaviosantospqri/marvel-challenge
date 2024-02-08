@@ -1,6 +1,6 @@
 import { FC } from "react";
 import { Route, Routes } from "react-router-dom";
-import { Login, Characters, Movies, Comics, Page404, Home } from "./src/pages";
+import { Login, Characters, Movies, Comics, Page404, Home, SignUp } from "./src/pages";
 import { PrivateRoute } from "./src/components";
 
 
@@ -24,6 +24,7 @@ const RouterApp: FC = () => {
       </Route>
       <Route path="/" element={<Home />} />
       <Route path="/login" element={<Login />} />
+      <Route path="/sign-up" element={<SignUp />} />
       <Route path="/*" element={<Page404 />} />
     </Routes>
 

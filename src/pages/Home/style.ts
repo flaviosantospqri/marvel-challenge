@@ -1,4 +1,4 @@
-import styled, { keyframes } from "styled-components";
+import styled from "styled-components";
 
 export const Section = styled.section`
   background: url("/src/assets/imgs/main.png");
@@ -26,7 +26,7 @@ export const Main = styled.main`
 
 export const Container = styled.div`
   background: var(--default-background);
-  opacity: 0.8;
+  opacity: 0.6;
   width: 100%;
   height: 100%;
   position: absolute;

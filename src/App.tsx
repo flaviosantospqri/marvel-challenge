@@ -13,7 +13,7 @@ function App() {
   const [showHeader, setShowHearder] = useState(true)
 
   useEffect(() => {
-    if (location.pathname === "/login") {
+    if (location.pathname === "/login" || location.pathname === "/sign-up") {
       setShowHearder(false)
     } else {
       setShowHearder(true)
