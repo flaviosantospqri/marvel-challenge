@@ -6,6 +6,11 @@ export const Container = styled.div`
   align-items: flex-start;
   flex-direction: column;
   justify-content: center;
+  @media (max-width: 768px) {
+    width: 100%;
+    align-items: center;
+    box-sizing: border-box;
+  }
   .content-logo {
     font-family: "Marvel";
     text-transform: uppercase;
@@ -75,13 +80,15 @@ export const Container = styled.div`
           input {
             z-index: 1000;
             margin: 10px 0;
-            width: 350px;
+            width: 100%;
+            max-width: 350px;
             height: 60px;
             padding: 0 20px;
             border-radius: 20px;
             border: none;
             font-size: 1.5rem;
-            color: #ebebeb;
+            color: #000000;
+            box-sizing: border-box;
           }
           input::-webkit-input-placeholder {
             color: #ebebeb;
@@ -90,7 +97,8 @@ export const Container = styled.div`
         }
         button {
           font-family: var(--secondary-font);
-          width: 380px;
+          width: 100%;
+          max-width: 380px;
           height: 60px;
           background-color: var(--red-color);
           border: none;
@@ -99,6 +107,9 @@ export const Container = styled.div`
           font-size: 1.5rem;
           color: var(--white-color);
           box-shadow: 10px 10px 11px -6px rgba(10, 10, 10, 1);
+          @media (max-width: 768px) {
+            font-size: 16px;
+          }
         }
         button:hover {
           background-color: #b81414;
@@ -119,6 +130,9 @@ export const Container = styled.div`
         a:active {
           color: var(--gray-color);
           border-bottom: 2px solid var(--red-color);
+          @media (max-width: 768px) {
+            color: white;
+          }
         }
         & div {
           z-index: 1000;

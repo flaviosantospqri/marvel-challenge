@@ -30,6 +30,7 @@ export const Container = styled.header<Menu>`
   }
   #collapse-menu {
     display: none;
+    transition: ease-in-out;
   }
 
   @media (max-width: 768px) {
