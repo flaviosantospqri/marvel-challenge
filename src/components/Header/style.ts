@@ -1,6 +1,10 @@
 import styled from "styled-components";
 
-export const Container = styled.header`
+interface Menu {
+  open: boolean;
+}
+
+export const Container = styled.header<Menu>`
   display: flex;
   top: 0;
   align-items: center;
@@ -14,9 +18,29 @@ export const Container = styled.header`
   .logo {
     margin-left: 30px;
   }
+  @media (max-width: 768px) {
+    position: relative;
+  }
   li {
     transition: ease-in-out;
     transition-duration: 200ms;
+    @media (max-width: 768px) {
+      margin: 5px;
+    }
+  }
+  #collapse-menu {
+    display: none;
+  }
+
+  @media (max-width: 768px) {
+    #collapse-menu {
+      display: block;
+      text-align: center;
+      color: var(--red-color);
+      cursor: pointer;
+      font-size: 52px;
+      margin-right: 10px;
+    }
   }
 
   ul {
@@ -28,7 +52,20 @@ export const Container = styled.header`
     font-family: var(--secondary-font);
     color: var(--gray-color);
     list-style-type: none;
-    font-size: 32px;
+    font-size: 2rem;
+    @media (max-width: 768px) {
+      font-size: 16px;
+      width: 15%;
+      flex-direction: column;
+      position: absolute;
+      display: ${(props) => (props.open ? "block" : "none")};
+      right: 0px;
+      top: 84px;
+      background-color: #000000;
+      border-radius: 4px;
+      border-top: 2px dashed #820300;
+    }
+
     .content-avatar-none {
       font-size: 18px;
       color: var(--red-color);

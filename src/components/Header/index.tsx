@@ -1,4 +1,4 @@
-import { FC } from 'react';
+import { FC, useState } from 'react';
 import { Logo } from '..';
 import { Container } from './style';
 import { Link, useNavigate } from 'react-router-dom';
@@ -18,6 +18,7 @@ interface MenuItensComponents {
 
 const Header: FC<MenuItensComponents> = ({ itens }) => {
     const auth = useSelector((state: RootState) => state.auth);
+    const [open, setOpenMenu] = useState(false)
     const dispatch = useDispatch();
     const navigate = useNavigate();
 
@@ -26,11 +27,16 @@ const Header: FC<MenuItensComponents> = ({ itens }) => {
         navigate('/login');
     }
 
+    const openMenu = () => {
+        setOpenMenu(prevState => !prevState)
+    }
+
     return (
-        <Container>
+        <Container open={open}>
             <div className='logo'>
                 <Logo size='md' />
             </div>
+            <span onClick={openMenu} id='collapse-menu' className="material-icons">menu</span>
             <ul>
                 {itens.map((item, index) => (
                     <li key={index}>
