@@ -1,8 +1,7 @@
-import { FC, useState } from 'react';
+import { FC } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { Container as ContainerHome } from "../Home/style";
-import { useDispatch, useSelector } from 'react-redux';
-import { RootState } from '../../store/config/types';
+import { useDispatch } from 'react-redux';
 import { signupRequest } from '../../store/auth/actions';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
@@ -16,9 +15,6 @@ interface UserState {
 }
 
 const SignUp: FC = () => {
-    const auth = useSelector((state: RootState) => state.auth);
-
-
     const navigate = useNavigate();
     const dispatch = useDispatch();
 
@@ -35,7 +31,7 @@ const SignUp: FC = () => {
     });
 
     const handleSubmit = async ({ email, username, password, saveLogin }: UserState) => {
-        const response = await dispatch(signupRequest({ username, password, saveLogin }));
+        const response = await dispatch(signupRequest({ email, username, password, saveLogin }));
 
         if (response.payload.username) {
             navigate("/login")

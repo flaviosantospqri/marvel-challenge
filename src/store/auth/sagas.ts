@@ -7,7 +7,6 @@ import {
   signUpUserSuccess,
 } from "./slice";
 import { toast } from "react-toastify";
-import { useNavigate } from "react-router-dom";
 
 function* loginUser(action: any): Generator<any, void, any> {
   const { username, password } = action.payload;
